@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="veiwport" content="width=device=width, initial-scale=1.0">
+        <title>THE TOPH GAME </title>
+        <style>
+            body , html {
+                height: 100%;
+                margin: 0;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            #game {
+                display: flex;
+            }
+
+            .cup {
+                width: 100px;
+                height: 100px;
+                background-color: grey;
+                border: 2px solid black;
+                border-radius: 50%;
+                display: inline-block;
+                margin: 10px;
+                cursor: pointer;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="GAME">
+            <div class="cup" onclick="guessCup (1)"></div>
+            <div class="cup" onclick="guessCup (2)"></div>
+            <div class="cup" onclick="guessCup (3)"></div>
+        </div>
+        <script>
+            let correctCup = Math.floor(Math.random() * 3);
+
+            function guessCup(choice){
+                if (choice === correctCup){
+                    alert("Yay pookieeee,you picked the right cup :3");
+                } else {
+                    alert("wrong choice,  but you can have another go :)" )
+                }
+                resetGame();
+            }    
+            
+            function resetGame() {
+                correctCup = Math.floor(Math.random() * 3);
+            }
+            
+        </script>
+        <h1>Your goal? Choose the right cup. literally thats it</h1>
+    </body>
+</html>
